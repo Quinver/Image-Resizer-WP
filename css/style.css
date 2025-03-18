@@ -1,0 +1,57 @@
+/* Admin Image Resizer Plugin Styles */
+.wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrap h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.wrap form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrap label {
+    font-size: 16px;
+    color: #555;
+}
+
+.wrap input[type="file"],
+.wrap input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.wrap input[type="number"] {
+    width: 80px;
+}
+
+.wrap input[type="file"] {
+    width: 300px;
+}
+
+.wrap .button-primary {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.wrap .button-primary:hover {
+    background-color: #005177;
+}
