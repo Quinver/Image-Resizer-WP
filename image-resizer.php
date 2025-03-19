@@ -15,7 +15,14 @@ if (!defined('ABSPATH')) {
 function enqueue_admin_styles() {
     wp_enqueue_style('admin-image-resizer-styles', plugin_dir_url(__FILE__) . 'css/style.css');
 }
+
+// Enqueue plugin's scripts
+function enqueue_admin_scripts() {
+    wp_enqueue_script('admin-image-resizer-scripts', plugin_dir_url(__FILE__) . 'js/script.js', array('jquery'), null, true);
+}
+
 add_action('admin_enqueue_scripts', 'enqueue_admin_styles');
+add_action('admin_enqueue_scripts', 'enqueue_admin_scripts');
 
 // Add the custom page
 function resize_form_page() {
@@ -44,38 +51,6 @@ function resize_form_page() {
             }
             ?>
         </div>
-
-        <style>
-            .loader {
-                display: none;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                border: 8px solid #f3f3f3;
-                border-top: 8px solid #3498db;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                animation: spin 1s linear infinite;
-            }
-
-            @keyframes spin {
-                0% { transform: translate(-50%, -50%) rotate(0deg); }
-                100% { transform: translate(-50%, -50%) rotate(360deg); }
-            }
-        </style>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                let form = document.querySelector("form");
-                let loader = document.getElementById("loadingCircle");
-
-                form.addEventListener("submit", function() {
-                    loader.style.display = "block";
-                });
-            });
-        </script>
 
         <?php
     } else {
