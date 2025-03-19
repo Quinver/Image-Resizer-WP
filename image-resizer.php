@@ -28,7 +28,7 @@ add_action('admin_enqueue_scripts', 'enqueue_admin_scripts');
 function resize_form_page() {
     if (current_user_can('administrator')) { // Ensure only admins can see the form
         ?>
-        <div class="wrap">
+        <div class="wrap-resize">
             <h1>Resize Tool</h1>
 
             <form method="post" enctype="multipart/form-data">
