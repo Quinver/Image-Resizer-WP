@@ -7,7 +7,7 @@ A simple image resizer plugin for WordPress.
 1. Navigate to your WordPress installation directory.  
 2. Clone this repository into the `/wp-content/plugins/` folder:  
    ```sh
-   git clone <repository-url> wp-content/plugins/image-resizer-wp
+   git clone https://github.com/Quinver/Image-Resizer-WP.git wp-content/plugins/image-resizer-wp
    ```
 3. Activate the plugin from the WordPress admin panel.
 
